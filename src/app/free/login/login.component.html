@@ -1,0 +1,42 @@
+<div class="container-login">
+    <div id="form" class="login">
+        <img src="/assets/img/logo.svg" alt="" />
+
+        <div class="fields">
+            <input
+                type="text"
+                id="email"
+                name="email"
+                [(ngModel)]="user.email"
+                placeholder="Email ou CPF"
+                required
+            />
+        </div>
+
+        <div class="fields">
+            <input
+                type="password"
+                id="password"
+                name="password"
+                [(ngModel)]="user.password"
+                placeholder="Senha"
+                required
+            />
+        </div>
+
+        <div id="entrar">
+            <input
+                type="submit"
+                name="loginbutton"
+                id="loginbutton"
+                class="btn-login"
+                value="Entrar"
+                (click)="login()"
+            />
+        </div>
+        <div class="esqueceu">
+            <a href="/recovery" id="esqueceu" >Esqueceu sua senha?</a>
+        </div>
+        <a href="" class="cadastrar">Cadastre-se aqui</a>
+    </div>
+</div>

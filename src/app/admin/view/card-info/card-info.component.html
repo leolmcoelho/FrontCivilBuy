@@ -1,0 +1,13 @@
+
+<div class="container">
+
+<div *ngFor="let info of infos" class="card-info">
+    <div class="icon">
+        <mat-icon [svgIcon]="info.icon"></mat-icon>
+    </div>
+    <div class="number">{{ info.number }}</div>
+    <div class="title">{{ info.title }}</div>
+    <!-- outras propriedades dinâmicas -->
+</div>
+
+</div>

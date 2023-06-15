@@ -1,0 +1,26 @@
+<aside >
+    <div class="seta">
+        <div class="etiqueta-horizontal">
+            <img src="../../../assets/img/seta.png" alt="" />
+
+            <div class="corpo-horizontal"></div>
+            <div class="ponta-horizontal"></div>
+        </div>
+    </div>
+
+    <ul>
+        <li></li>
+        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" >
+      <a routerLink="{{menuItem.link}}"  (click)="selectItem(menuItem.text)">
+        <mat-icon>{{menuItem.icon}}</mat-icon>
+        <span>{{menuItem.text}}</span>
+      </a>
+    </li>
+    </ul>
+
+    <div class="logout" (click)="logout()">
+        Sair
+        <mat-icon>logout</mat-icon>
+
+    </div>
+</aside>

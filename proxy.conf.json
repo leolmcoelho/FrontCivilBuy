@@ -1,0 +1,7 @@
+{
+    "/controller": {
+        "target": "http://127.0.0.1:93/",
+        "secure": false,
+        "changeOrigin": true
+    }
+}
