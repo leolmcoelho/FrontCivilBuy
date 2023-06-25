@@ -1,0 +1,29 @@
+.legend-item {
+  display: flex;
+  align-items: center;
+  color: #FFF;
+}
+
+.legend-marker {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  content: ' ';
+}
+
+.legend-label {
+  font-size: 14px;
+}
+
+
+.legenda {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: center;
+}

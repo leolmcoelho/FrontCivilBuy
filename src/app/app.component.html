@@ -1,1 +1,25 @@
-<app-login></app-login>
+<div [@fadeInOut]>
+    <ng-container *ngIf="authService.isAuthenticated(); else notAuthenticated">
+        <div class="layout-container">
+            <div class="app-header">
+               <app-header [isMenuOpen]="menuOpen" (menuToggle)="handleMenuToggle()"></app-header>
+
+            </div>
+            <div class="content-container">
+                <div class="app-aside" [class.open]="menuOpen">
+                    <app-aside (itemSelected)="handleItemSelected()"></app-aside>
+                </div>
+                <div class="router-container">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+            <div class="app-footer">
+                <app-footer class="app-footer"></app-footer>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-template #notAuthenticated>
+        <router-outlet></router-outlet>
+    </ng-template>
+</div>

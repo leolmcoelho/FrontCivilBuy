@@ -1,0 +1,26 @@
+.setas{
+    display: flex;
+    align-items: center;
+}
+.corpo {
+  color: #000;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  width: 95%;
+  background: #f5a321;
+  //padding-right: 20px;
+  //height: 5vw;
+  //height: 33px;
+}
+
+.ponta{
+    display: flex;
+    margin-left: -4px;
+    img{
+        max-width: 33px;
+    }
+    
+}
+

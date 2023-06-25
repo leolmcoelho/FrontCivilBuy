@@ -6,7 +6,7 @@ import { LoginComponent } from './login/login.component'
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { HttpClient } from '@angular/common/http';
         CommonModule,
         MatSlideToggleModule,
         FormsModule,
-        //HttpClient
+        HttpClientModule
     ],
     exports: [LoginComponent],
 })

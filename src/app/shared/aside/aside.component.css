@@ -1,0 +1,89 @@
+aside {
+  background: #285b9f;
+  height: 100%;
+  color: #fff;
+  transition: transform 0.3s ease;
+  color: #f5a321;
+}
+
+aside.open {
+  display: block;
+  width: 100%;
+}
+
+.seta {
+  background: #001c42;
+}
+
+.etiqueta-horizontal {
+  filter: drop-shadow(0px 4px 20px #011c42);
+}
+.etiqueta-horizontal img {
+  max-width: 215px;
+  max-height: 200px;
+  margin-top: -11px;
+  margin-bottom: 0px;
+}
+
+ul {
+  list-style: none;
+  margin-top: -20px; /* Ajustado */
+  padding: 0;
+  margin: 0;
+  margin-top: -40px;
+  padding-top: 20px;
+  background-color: rgba(40, 91, 159, 0.95); /* Ajustado */
+}
+
+a {
+  display: inline-flex;
+  padding: 10px;
+  padding-right: 0;
+  max-width: 100%;
+}
+
+li:nth-child(1) {
+  border: none;
+}
+
+li {
+  border-bottom: 3px solid #163c70;
+  padding-bottom: 5px;
+}
+
+li.active {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+a {
+  text-decoration: none;
+  color: #f5a321;
+  display: flex;
+  align-items: center;
+}
+
+span {
+  margin-left: 15px;
+}
+
+mat-icon {
+  color: #f5a321;
+}
+
+.logout {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+.logout mat-icon {
+  margin-left: 5px;
+}
+
+@media only screen and (orientation: landscape) and (min-width: 800px) {
+  aside {
+    display: block;
+    max-width: 200px;
+  }
+}/*# sourceMappingURL=aside.component.css.map */

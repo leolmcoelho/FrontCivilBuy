@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  user: string = 'Administrator';
+  @Input() isMenuOpen = false;
+  @Output() menuToggle = new EventEmitter<void>();
 
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+    this.menuToggle.emit();
+  }
 }

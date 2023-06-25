@@ -1,0 +1,26 @@
+.container {
+  background: #001c42;
+  max-width: 100vw;
+}
+
+* {
+  max-width: 100vw;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: auto;
+}
+
+app-card-info {
+  grid-row: 1/-1;
+}
+
+app-doughnut {
+  grid-column: 1;
+}
+
+app-bar {
+  grid-column: 2/4;
+}/*# sourceMappingURL=dashboard.component.css.map */

@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private userAuth: boolean = false;
+  private userAuth: boolean = true;
 
   constructor(private http: HttpClient, private router: Router) { }
   /*

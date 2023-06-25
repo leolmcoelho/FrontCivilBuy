@@ -32,9 +32,9 @@ export class CardInfoComponent implements OnInit {
 
           // Crie um array de CardInfoItem com os dados recebidos
           this.infos = [
-            { icon: 'coin', number: 'R$ ' + indicators.sales, title: 'Vendas' },
-            { icon: 'graph', number: indicators.sales_quant.toString(), title: 'Quantidade de Vendas' },
-            { icon: 'users', number: indicators.user.toString(), title: 'Usuário' }
+            { icon: 'coin', number: 'R$ ' + indicators.sales, title: 'Faturamento', className :'um' },
+            { icon: 'graph', number: indicators.sales_quant.toString(), title: 'Quantidade de Vendas',  className :'dois' },
+            { icon: 'users', number: indicators.user.toString(), title: 'Usuário',  className :'tres'}
           ];
 
         }
