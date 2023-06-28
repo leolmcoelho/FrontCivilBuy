@@ -23,42 +23,40 @@ export class CardInfoComponent implements OnInit {
     this.registerIcons();
 
     this.dataService.getIndicadores().subscribe(
-      (data) => {
+      (data: any) => { // Defina o tipo do parâmetro 'data'
         console.log(data);
-
+    
         // Verifique se a resposta possui a propriedade 'data'
         if (data && data.success && data.data) {
           const indicators = data.data;
-
+    
           // Crie um array de CardInfoItem com os dados recebidos
           this.infos = [
-            { icon: 'coin', number: 'R$ ' + (indicators.sales || 0), title: 'Faturamento', className: 'um' },
-            { icon: 'graph', number: (indicators.sales_quant || 0).toString(), title: 'Quantidade de Vendas', className: 'dois' },
-            { icon: 'users', number: (indicators.user || 0).toString(), title: 'Usuário', className: 'tres' }
-          ];
-        } else {
-          // Caso não haja dados disponíveis, defina os valores iniciais como 0
-          this.infos = [
-            { icon: 'coin', number: 'R$ 0', title: 'Faturamento', className: 'um' },
-            { icon: 'graph', number: '0', title: 'Quantidade de Vendas', className: 'dois' },
-            { icon: 'users', number: '0', title: 'Usuário', className: 'tres' }
-          ];
+            { icon: 'coin', number: 'R$ ' + indicators.sales, title: 'Faturamento', className: 'vermelho' },
+            { icon: 'graph', number: indicators.sales_quant.toString(), title: 'Quantidade de Vendas', className: 'amarelo' },
+            { icon: 'users', number: indicators.user.toString(), title: 'Usuário', className: 'verde' }
+          ].map(info => ({
+            ...info,
+            className: this.getClassName(info) // Adicione a propriedade className usando a função auxiliar
+          }));
         }
       },
-      (error) => {
-        console.error('Ocorreu um erro ao recuperar os indicadores.', error);
-
-        // Caso ocorra um erro, defina os valores iniciais como 0
-        this.infos = [
-          { icon: 'coin', number: 'R$ 0', title: 'Faturamento', className: 'um' },
-          { icon: 'graph', number: '0', title: 'Quantidade de Vendas', className: 'dois' },
-          { icon: 'users', number: '0', title: 'Usuário', className: 'tres' }
-        ];
+      (error: any) => { // Defina o tipo do parâmetro 'error'
+        console.log('Erro ao obter os indicadores:', error);
       }
     );
   }
-
-
+  
+  private getClassName(info: CardInfoItem): string {
+    // Lógica condicional para atribuir a classe com base nas propriedades do objeto
+    if (info.title === 'Faturamento') {
+      return 'vermelho';
+    } else if (info.title === 'Quantidade de Vendas') {
+      return 'azul';
+    } else {
+      return 'amarelo';
+    }
+  }
   private registerIcons(): void {
     const iconNames = ['users', 'graph', 'coin'];
     const basePath = '../../../../assets/img/';
@@ -71,6 +69,4 @@ export class CardInfoComponent implements OnInit {
       );
     });
   }
-
-
 }

@@ -15,6 +15,13 @@ import { BarComponent } from './view/charts/bar/bar.component';
 import { ProfilePhotoComponent } from '../general/views/profile-photo/profile-photo.component';
 import { NgChartsModule } from 'ng2-charts';
 import { YellowArrowComponent } from '../general/views/yellow-arrow/yellow-arrow.component';
+import { PendingOrdersComponent } from './view/pending-orders/pending-orders.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { FormPopupComponent } from './view/form-popup/form-popup.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+
 //import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
@@ -28,6 +35,8 @@ import { YellowArrowComponent } from '../general/views/yellow-arrow/yellow-arrow
     BarComponent,
     ProfilePhotoComponent,
     YellowArrowComponent,
+    PendingOrdersComponent,
+    FormPopupComponent,
   ],
   imports: [
     CommonModule,
@@ -35,6 +44,10 @@ import { YellowArrowComponent } from '../general/views/yellow-arrow/yellow-arrow
     HttpClientModule,
     SharedModule,
     NgChartsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatCardModule,
+    MatDialogModule,
 
   ],
   providers: [

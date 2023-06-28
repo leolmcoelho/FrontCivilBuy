@@ -8,8 +8,10 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
   private userAuth: boolean = true;
+  
 
   constructor(private http: HttpClient, private router: Router) { }
+  
   /*
   initialize(): Promise<boolean> {
     return new Promise<boolean>((resolve, reject) => {
@@ -88,7 +90,8 @@ export class AuthService {
   }
 
   public isAuthenticated(): boolean {
-    const userAuth = localStorage.getItem('Auth') === 'true';
+    //const userAuth = localStorage.getItem('Auth') === 'true';
+    const userAuth = true;
     return userAuth;
   }
 }
