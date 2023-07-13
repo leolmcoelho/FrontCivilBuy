@@ -1,0 +1,23 @@
+* {
+    background-color: #001c42;
+    color: #f5a321;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+}
+.bar-tab {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+.tab-item {
+    width: 100%;
+    min-height: 49px;
+
+    &:hover {
+        border-bottom: 1px solid #f5a321;
+    }
+}
+.active {
+    background: rgba(217, 217, 217, 0.2);
+}

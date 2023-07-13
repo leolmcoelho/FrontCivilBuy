@@ -16,13 +16,15 @@ import { ProfilePhotoComponent } from '../general/views/profile-photo/profile-ph
 import { NgChartsModule } from 'ng2-charts';
 import { YellowArrowComponent } from '../general/views/yellow-arrow/yellow-arrow.component';
 import { PendingOrdersComponent } from './view/pending-orders/pending-orders.component';
-import { MatTableModule } from '@angular/material/table';
+
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FormPopupComponent } from './view/form-popup/form-popup.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
-
-//import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatPaginatorModule,
     MatCardModule,
     MatDialogModule,
-
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatTabsModule,
   ],
   providers: [
     DataService,

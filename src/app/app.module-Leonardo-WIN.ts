@@ -9,7 +9,9 @@ import { FreeModule } from "./free/free.module"
 import { AuthService } from "./service/auth.service"
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
+import { fadeInOutAnimation } from './fade-in-out.animation';
 
+import { LoginComponent } from "./free/login/login.component"
 import { SharedModule } from "./shared/shared.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AdminModule } from "./admin/admin.module";

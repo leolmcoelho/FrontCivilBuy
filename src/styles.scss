@@ -58,6 +58,21 @@ $my-theme: mat-light-theme($my-primary, $my-accent, $my-warn);
 
 
 
+$my-primary: mat-palette($mat-yellow, 500, 900, 400);
+$my-grey: mat-palette($mat-grey, 600, 50,  50);
+
+$my-accent: mat-palette($mat-yellow, 50, 50, 50);
+$my-warn: mat-palette($mat-red);
+
+$my-theme: mat-light-theme($my-primary, $my-grey, $my-warn);
+
+@include angular-material-theme($my-theme);
+
+
+.mat-tab {
+  background-color: red !important;
+}
+
 /*
 
 // Definir a paleta de cores personalizada

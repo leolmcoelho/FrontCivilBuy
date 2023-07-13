@@ -44,7 +44,7 @@ export class BarComponent implements OnInit, AfterViewInit {
               backgroundColor: backgroundColors
             },
 
-          
+           
           ]
         },
         options: {

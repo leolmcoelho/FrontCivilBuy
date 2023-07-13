@@ -1,26 +1,52 @@
 .container {
     background: #001c42;
     //color: #FFF;
-    max-width: 100vw;
-}
-* {
-    max-width: 100vw;
+    max-width: 100%;
 }
 
+* {
+    max-width: 100%;
+}
+
+
 .charts {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    //grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: auto;
+    margin: 12px
 }
 
 app-card-info {
     grid-row: 1 / -1;
+    grid-template-columns: 1fr 1fr;
+    padding: 2px;
 }
 
 app-doughnut {
     grid-column: 1;
-    
+    border: 4px solid #285B9F;
+
 }
+
 app-bar {
     grid-column: 2 / 4;
+    border: 4px solid #285B9F;
+    color: #fff;
+}
+
+@media only screen and (orientation: landscape) and (min-width: 800px) {
+    * {
+        max-width: 100%;
+    }
+    
+    
+    .charts {
+        display: grid;
+        //flex-direction: row;
+        grid-template: 1fr 1fr 1fr;
+        grid-template-areas: auto;
+        margin: 12px
+    }
+    
 }

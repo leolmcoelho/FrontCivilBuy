@@ -1,0 +1,25 @@
+mat-card {
+    display: grid;
+    flex-direction: column;
+    background-color: #011C42;
+    width: 80vw;
+    color: #fff;
+}
+
+mat-card-content{
+    width: 80vw;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+input {
+    background-color: #163C70;
+    border: 1px solid #285B9F;
+    color: #FFFFFF80;
+    width: 312px;
+    height: 25px;
+    //padding: 2px;
+}
