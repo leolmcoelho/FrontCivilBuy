@@ -31,6 +31,7 @@ import { ImageCropperModule } from 'ngx-image-cropper';
 import { GeneralModule } from '../general/general.module';
 import { PopupComponent } from './view/popup/popup.component';
 import { FormProfileComponent } from './view/form-profile/form-profile.component';
+import { PedidosNoneComponent } from './view/pedidos-none/pedidos-none.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { FormProfileComponent } from './view/form-profile/form-profile.component
     FormPopupComponent,
     PopupComponent,
     FormProfileComponent,
+    PedidosNoneComponent,
     
   ],
   imports: [

@@ -42,11 +42,23 @@ app-bar {
     
     
     .charts {
-        display: grid;
+        display: flex;
+        flex-direction: row;
         //flex-direction: row;
-        grid-template: 1fr 1fr 1fr;
-        grid-template-areas: auto;
-        margin: 12px
+        //grid-template: 1fr 2fr;
+        //grid-template-areas: auto;
+        margin: 12px;
+        
+
+    }
+
+    app-bar{
+        flex: 2;
+        margin-left: 20px;
+    }
+
+    app-doughnut{
+        flex: 1;
     }
     
 }
