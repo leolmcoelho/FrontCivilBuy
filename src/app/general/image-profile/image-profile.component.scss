@@ -1,0 +1,62 @@
+/*.profile {
+    margin-bottom: 30px;
+}
+*/
+
+
+mat-icon {
+    color: #f5a321;
+}
+
+#lapis {
+    color: #011c42;
+    background-color: #285b9f;
+    //width: 50px;
+    //height: 50px;
+    //margin-top: -30px;
+}
+$icon: -61px;
+.upload-icon {
+    
+    margin-top: $icon;
+    display: flex;
+    justify-content: flex-end;
+
+    //flex-shrink: 0;
+}
+
+.profile-container {
+    width: 200px;
+    height: 200px;
+    //min-width: 70%;
+    background-color: #d9d9d9;
+}
+
+.image {
+    //background-color: #d9d9d9;
+
+    mat-icon {
+        margin-top: 33px;
+        font-size: 200px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#profile-icon {
+    //margin-bottom: calc($icon - 60px);
+}
+
+.profile-container {
+    position: relative; /* Adiciona esta propriedade para que o ícone de upload seja posicionado relativo a esta div */
+    /* Restante do CSS para a classe .profile-container */
+    cursor: pointer;  
+}
+  
+  .upload-icon {
+    position: absolute; /* Adiciona esta propriedade para que o ícone de upload fique posicionado de forma absoluta */
+    bottom: 0;
+    right: 0;
+     /* Posiciona o ícone de upload na parte inferior da div profile-container */
+    /* Restante do CSS para a classe .upload-icon */
+  }

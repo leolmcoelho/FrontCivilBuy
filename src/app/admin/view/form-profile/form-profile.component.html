@@ -1,0 +1,31 @@
+<mat-card>
+    <div class="popup-content">
+      <form [formGroup]="form" (ngSubmit)="submitForm()" class="form">
+        <!-- Restante do seu formulário -->
+       
+        
+        <ng-container *ngFor="let formData of formsLabels">
+          <fieldset>
+            <label>{{ formData.label }}</label>
+            <input *ngIf="formData.type !== 'file'" type="{{ formData.type || 'text' }}"
+              [placeholder]="formData.placeholder" [formControlName]="formData.formControlName"
+              [class]="formData.class" />
+            <div *ngIf="formData.type === 'file' && formData.acceptImages">
+  
+              
+             
+              <!-- Exibir a imagem cortada dentro de uma div -->
+  
+            </div>
+          </fieldset>
+  
+        </ng-container>
+  
+        <!-- Div para exibir a imagem cortada -->
+       
+  
+      </form>
+    </div>
+  
+   
+  </mat-card>

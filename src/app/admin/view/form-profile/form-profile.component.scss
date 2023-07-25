@@ -1,0 +1,184 @@
+/*
+* {
+    // background-color: #163c70;
+}
+
+mat-card {
+    display: grid;
+    flex-direction: column;
+    background-color: #011c42;
+    //width: 80vw;
+    color: #fff;
+}
+
+mat-card-content {
+    //min-width: 80vw;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 400;
+}
+mat-icon {
+    color: #f5a321;
+}
+
+input {
+    border: 1px solid #285b9f;
+    color: #ffffff80;
+    //width: 312px;
+    //height: 25px;
+    //padding: 2px;
+}
+.fields {
+    display: grid;
+}
+.file {
+    grid-area: 1/1;
+    input {
+        visibility: hidden;
+    }
+}
+
+.popup-content {
+    overflow-y: initial;
+    overflow-x: auto;
+    display: grid;
+
+    //max-height: 80vh; /* Defina a altura máxima desejada 
+}
+
+.form {
+    display: grid;
+    justify-items: center;
+}
+
+.close {
+    text-align: right;
+    padding: 10px;
+}
+
+.profile {
+    width: 200px;
+    height: 200px;
+    //min-width: 70%;
+    background-color: #d9d9d9;
+}
+.image {
+    //background-color: #d9d9d9;
+    mat-icon {
+        font-size: 200px;
+        width: 100%;
+        height: 100%;
+    }
+}
+*/
+
+.popup-content {
+    overflow-y: auto;
+    max-height: 80vh; /* Adjust this value to set the maximum height you want */
+    margin: 20px;
+    margin-bottom: 30px;
+}
+
+fieldset {
+    margin-top: 20px;
+}
+
+fieldset:last-of-type {
+    margin-bottom: 20px;
+}
+
+mat-card {
+    flex-direction: column;
+    background-color: #011c42;
+    /* other styles... */
+}
+
+.profile {
+    margin-bottom: 30px;
+}
+
+.form {
+    display: grid;
+    justify-items: center;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        width: 100%;
+    }
+}
+
+mat-icon {
+    color: #f5a321;
+}
+
+.profile {
+    width: 200px;
+    height: 200px;
+    //min-width: 70%;
+    background-color: #d9d9d9;
+}
+
+.image {
+    //background-color: #d9d9d9;
+    mat-icon {
+        font-size: 200px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+mat-card {
+    display: grid;
+    flex-direction: column;
+    background-color: #011c42;
+    //width: 80vw;
+    color: #fff;
+}
+
+mat-card-content {
+    //width: 80vw;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+input {
+    background-color: #163c70;
+    border: 1px solid #285b9f;
+    color: #ffffff80;
+    width: 312px;
+    height: 25px;
+    //padding: 2px;
+}
+
+mat-card-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 52px;
+    //padding: 8px;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.btn{
+    padding:  5px 15px;
+    color: #FFF;
+}
+
+.reprovar {
+    background: #285b9f;
+}
+
+.aprovar{
+    background: #F5A321;
+}

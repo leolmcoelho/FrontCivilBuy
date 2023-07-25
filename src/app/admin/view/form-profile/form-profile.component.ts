@@ -1,24 +1,21 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { formsLabels } from '../form-popup/form-labels';
 import { FormGroup, FormBuilder, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
-import { ImageCroppedEvent } from 'ngx-image-cropper';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
 
 import { ImageUploaderComponent } from 'src/app/general/image-uploader/image-uploader.component';
 
-import { formsLabels } from './form-labels';
-import { MatDialog } from '@angular/material/dialog';
 
+ 
 @Component({
-  selector: 'app-form-popup',
-  templateUrl: './form-popup.component.html',
-  styleUrls: ['./form-popup.component.scss']
+  selector: 'app-form-profile',
+  templateUrl: './form-profile.component.html',
+  styleUrls: ['./form-profile.component.scss']
 })
-export class FormPopupComponent implements OnInit {
-  @Input() isPopup: boolean = false;
+export class FormProfileComponent {
 
-  @Output() submitFormEvent = new EventEmitter<any>();
-  @Output() closeDialogEvent = new EventEmitter<void>();
 
   form: FormGroup;
   formsLabels = formsLabels;
@@ -28,8 +25,6 @@ export class FormPopupComponent implements OnInit {
   selectedImageControl: string = '';
 
   croppedImage: SafeUrl | null = null;
-
-  isScrollActive = true;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -56,8 +51,8 @@ export class FormPopupComponent implements OnInit {
     });
   }
 
-  submitForm() {
-    this.submitFormEvent.emit(this.form.value);
+  submitForm(){
+
   }
 
   imageValidator(control: AbstractControl): ValidationErrors | null {
@@ -85,7 +80,7 @@ export class FormPopupComponent implements OnInit {
 
   openImageUploader() {
     // Verifica se o componente está sendo utilizado dentro de um popup
-    if (this.isPopup) {
+    
       const dialogRef = this.dialog.open(ImageUploaderComponent, {
         width: '400px',
         maxHeight: '70vh' // Defina o tamanho desejado para o popup
@@ -100,20 +95,12 @@ export class FormPopupComponent implements OnInit {
           this.croppedImage = croppedImage;
         }
       });
-    } else {
-      // Se não estiver em um popup, faça a lógica de abrir o componente de imagem diretamente aqui
-      // Exemplo:
-      // const imageUploaderDialogRef = this.dialog.open(ImageUploaderComponent, {
-      //   width: '400px',
-      //   maxHeight: '70vh'
-      // });
-      // ...
-    }
+    
   }
 
   closeDialog() {
-    if (this.isPopup) {
-      this.closeDialogEvent.emit();
-    }
+   
+      //this.closeDialogEvent.emit();
+    
   }
 }

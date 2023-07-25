@@ -5,11 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { FormPopupComponent } from '../form-popup/form-popup.component';
 
-@Component({
-  selector: 'app-pending-orders',
-  templateUrl: './pending-orders.component.html',
-  styleUrls: ['./pending-orders.component.scss']
-})
+
 export class PendingOrdersComponent {
   //displayedColumns: string[] = ['numero', 'nomeFantasia', 'razaoSocial', 'cnpj', 'cep', 'uf'];
   dataSource: MatTableDataSource<ItemTabela>;
@@ -51,7 +47,7 @@ export class PendingOrdersComponent {
  
   }
 
-  openFormPopup(element: any) {
+  penFormPopup(element: any) {
     console.log(element);
     const dialogRef = this.dialog.open(FormPopupComponent, {
 

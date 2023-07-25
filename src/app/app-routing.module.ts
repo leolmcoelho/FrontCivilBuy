@@ -19,7 +19,6 @@ const routes: Routes = [
   { path: 'users', component: UsersComponent , canActivate: [AuthGuard] },
   //{ path: '', component: , canActivate: [AuthGuard] }
 
-
 ];
 
 @NgModule({

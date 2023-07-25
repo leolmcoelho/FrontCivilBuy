@@ -25,6 +25,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ImageCropperModule } from 'ngx-image-cropper';
+import { GeneralModule } from '../general/general.module';
+import { PopupComponent } from './view/popup/popup.component';
+import { FormProfileComponent } from './view/form-profile/form-profile.component';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +46,9 @@ import { MatTableModule } from '@angular/material/table';
     YellowArrowComponent,
     PendingOrdersComponent,
     FormPopupComponent,
+    PopupComponent,
+    FormProfileComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -53,10 +63,18 @@ import { MatTableModule } from '@angular/material/table';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatTabsModule,
+    MatInputModule,
+    MatSnackBarModule,
+    ImageCropperModule,
+    GeneralModule,
+    MatSnackBarModule
+
   ],
   providers: [
     DataService,
-    MatIconRegistry
+    MatIconRegistry,
+    MatCardModule,
+    //MatDialog
   ]
 })
 export class AdminModule { }

@@ -1,14 +1,21 @@
 * {
     background-color: #001c42;
     color: #f5a321;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.75rem;
+    font-size: 18px;
+    font-weight: 700px;
+    //line-height: 700px;
 }
+
+.box{
+    //overflow: auto;
+    max-width: 100vw;
+}
+
 .bar-tab {
     width: 100%;
     display: flex;
     margin-bottom: 10px;
+    overflow-y: auto;
 }
 .tab-item {
     width: 100%;
@@ -21,3 +28,8 @@
 .active {
     background: rgba(217, 217, 217, 0.2);
 }
+
+
+
+
+

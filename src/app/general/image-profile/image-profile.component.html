@@ -1,0 +1,13 @@
+<div class="profile-container" (click)="openImageUploader()">
+  <ng-container *ngIf="croppedImage; else showIcon">
+    <img [src]="croppedImage" alt="">
+  </ng-container>
+  <ng-template #showIcon>
+    <div class="image">
+      <mat-icon id='profile-icon' class="icon-without-margin">person</mat-icon>
+    </div>
+  </ng-template>
+  <div class="upload-icon">
+    <mat-icon id='lapis'  class="icon-without-margin">edit</mat-icon>
+  </div>
+</div>

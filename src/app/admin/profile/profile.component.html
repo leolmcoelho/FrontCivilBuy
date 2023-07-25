@@ -1,4 +1,29 @@
 <div class="container">
-    <app-profile-photo></app-profile-photo>
-    <div class="form"></div>
+
+  <app-image-profile></app-image-profile>
+  <form id="form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    
+
+    <ng-container *ngFor="let field of inputFields">
+      <fieldset>
+        <label for="{{ field.formControlName }}">{{ field.label }}</label>
+        <div class="field">
+          <input
+            type="{{ field.type }}"
+            id="{{ field.formControlName }}"
+            [formControlName]="field.formControlName"
+            [required]="field.required"
+            [disabled]="fieldDisabled[field.formControlName]"
+          >
+          <mat-icon
+            id="lapis"
+           
+            (click)="toggleFieldState(field.formControlName);"
+          >
+            {{ iconState[field.formControlName] ? 'check' : 'edit' }}
+          </mat-icon>
+        </div>
+      </fieldset>
+    </ng-container>
+  </form>
 </div>

@@ -65,14 +65,15 @@ export class PendingOrdersComponent {
     this.dataSource.paginator = this.paginator;
 
 
-    
+    this.openFormPopup('');
 
   }
 
   openFormPopup(element: any) {
     console.log(element);
     const dialogRef = this.dialog.open(FormPopupComponent, {
-      width: '400px',
+      //width: '400px',
+      maxHeight:'90vh'
       // Outras configurações do diálogo, se necessário
     });
   }

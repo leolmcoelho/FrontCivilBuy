@@ -1,0 +1,22 @@
+
+<div class="container">
+  <mat-card>
+    <div class="popup-content">
+      <input type="file" accept="image/*" (change)="fileChangeEvent($event)">
+      <image-cropper
+        [imageChangedEvent]="imageChangedEvent"
+        [cropperMinWidth]="128"
+        [cropperMinHeight]="128"
+        
+        [resizeToHeight]="200"
+        [resizeToWidth]="200"
+        (imageCropped)="onImageCropped($event)"
+        (imageLoaded)="imageLoaded"
+      ></image-cropper>
+         <!-- Botão de confirmação -->
+      <button mat-button (click)="confirmCropping()">Confirmar</button>
+      <button mat-button (click)="confirmCropping()">Cancelar Corte</button>
+    </div>
+  </mat-card>
+</div>
+

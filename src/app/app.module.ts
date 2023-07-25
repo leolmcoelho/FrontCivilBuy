@@ -13,6 +13,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from "./shared/shared.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AdminModule } from "./admin/admin.module";
+import { GeneralModule } from "./general/general.module"
+
+
 
 @NgModule({
     declarations: [AppComponent],
@@ -25,7 +28,8 @@ import { AdminModule } from "./admin/admin.module";
         MatIconModule,
         HttpClientModule,
         BrowserAnimationsModule,
-        AdminModule
+        AdminModule,
+        GeneralModule
 
         //LoginComponent
     ],

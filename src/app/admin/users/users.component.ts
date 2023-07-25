@@ -24,5 +24,6 @@ export class UsersComponent {
     if (tabIndex !== -1) {
       this.activeTab = tabIndex;
     }
+    console.log('ativou');
   }
 }
