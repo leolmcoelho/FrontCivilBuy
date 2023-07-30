@@ -9,6 +9,10 @@
     transition: max-height 0.3s ease; /* Ajuste o valor de "0.3s" para alterar a velocidade da animação */
 }
 
+.close{
+    text-align: right;
+    margin:  15px 20px;
+}
 
 /* Estilizando o scroll vertical */
 .popup-content::-webkit-scrollbar {
@@ -38,7 +42,7 @@ fieldset:last-of-type {
 }
 
 mat-card {
-    padding: 30px;
+    //padding: 30px;
     flex-direction: column;
     background-color: #011c42;
     /* other styles... */
@@ -117,6 +121,7 @@ mat-card-actions {
     //padding: 8px;
     justify-content: space-around;
     margin-bottom: 10px;
+    background-color: #011c42;
 }
 
 .btn {
@@ -144,5 +149,5 @@ mat-card-actions {
     width: 100%; /* Defina a largura como 100% para que ocupe toda a largura da tela */
     padding: 8px; /* Adicione algum espaçamento para melhor aparência */
     //background-color: white; /* Opcional: definir a cor de fundo do mat-card-actions */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Opcional: adicionar sombra na parte inferior */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3); /* Opcional: adicionar sombra na parte inferior */
 }

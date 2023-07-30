@@ -21,7 +21,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { FormPopupComponent } from './view/form-popup/form-popup.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
@@ -32,6 +32,8 @@ import { GeneralModule } from '../general/general.module';
 import { PopupComponent } from './view/popup/popup.component';
 import { FormProfileComponent } from './view/form-profile/form-profile.component';
 import { PedidosNoneComponent } from './view/pedidos-none/pedidos-none.component';
+import { PedidosTableComponent } from './view/pedidos-table/pedidos-table.component';
+import { SearchBarComponent } from './view/search-bar/search-bar.component';
 
 
 @NgModule({
@@ -50,6 +52,8 @@ import { PedidosNoneComponent } from './view/pedidos-none/pedidos-none.component
     PopupComponent,
     FormProfileComponent,
     PedidosNoneComponent,
+    PedidosTableComponent,
+    SearchBarComponent,
     
   ],
   imports: [
@@ -69,7 +73,8 @@ import { PedidosNoneComponent } from './view/pedidos-none/pedidos-none.component
     MatSnackBarModule,
     ImageCropperModule,
     GeneralModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    FormsModule
 
   ],
   providers: [

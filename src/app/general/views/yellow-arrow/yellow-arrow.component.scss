@@ -8,7 +8,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  width: 95%;
+  width: 96%;
   background: #f5a321;
   //padding-right: 20px;
   //height: 5vw;
@@ -24,3 +24,24 @@
     
 }
 
+.infos{
+    position: absolute;
+    right: 5vw;
+    color: #000;
+    display: flex;
+    align-items: flex-end;
+
+    padding:10px;
+
+    
+}
+
+.icons{
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.total{
+    margin-right: 10px;
+}

@@ -1,7 +1,12 @@
-<div class="box">
-    <app-yellow-arrow [name]="'Pedidos'"></app-yellow-arrow>
-    <app-pedidos-none></app-pedidos-none>
-</div>
-<div class="box">
-    <app-yellow-arrow [name]="'Tipos de Produto'"></app-yellow-arrow>
+<div class="container">
+    <div class="box">
+        <app-yellow-arrow [name]="'Pedidos'"></app-yellow-arrow>
+        <app-pedidos-none></app-pedidos-none>
+    </div>
+
+    <app-search-bar (searchTextChanged)="filterValue = $event"></app-search-bar>
+    <div class="box">
+        <app-yellow-arrow [name]="'Tipos de Produto'"></app-yellow-arrow>
+        <app-pedidos-table [filterValue]="filterValue"></app-pedidos-table>
+    </div>
 </div>

@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { CardInfoItem } from '../models/card-info';
 import { ApiResponse } from '../models/api-response';
+import { productItems } from '../data/product';
+import { data1 } from '../data/client';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +29,14 @@ export class DataService {
 
     // Simule uma chamada HTTP e retorne os dados como um Observable
     return of({ success: true, data: salesByStore });
+  }
+
+  getProdutosConstrucaoCivil() {
+    return productItems;
+  }
+
+  getClientes() {
+    return data1;
   }
 
 }

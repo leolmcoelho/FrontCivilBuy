@@ -1,6 +1,6 @@
-import { ItemTabela } from 'src/app/models/table';
+import { ItemTabelaProduct } from '../models/product';
 
-export const produtosConstrucaoCivil = [
+export const productItems: ItemTabelaProduct[] = [
     {
       nome: 'Tijolo Cerâmico',
       descricao: 'Tijolo de cerâmica vermelho',

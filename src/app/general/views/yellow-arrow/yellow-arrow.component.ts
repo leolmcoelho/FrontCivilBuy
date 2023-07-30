@@ -7,4 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class YellowArrowComponent {
   @Input() name: string = '';
+
+  @Input() valor_itens: number = 110;
+
+  
 }
